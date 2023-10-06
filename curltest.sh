@@ -1,0 +1,1 @@
+ curl -X POST -F "image=@testdata/a2.jpg" http://127.0.0.1:8000/infer

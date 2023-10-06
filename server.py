@@ -49,7 +49,7 @@ def run_inference(file):
     # Get output tensor
     output_details = interpreter.get_output_details()
     output_data = interpreter.get_tensor(output_details[0]['index'])
-    print("Duration to load model = ", time.time() - start)
+    print("Duration to run inference = ", time.time() - start)
 
     return output_data
 
@@ -94,12 +94,20 @@ def api():
             return jsonify({'error': 'no file'})
         
 
-if __name__ == "__main__":
-    tflite_model_path = "model2019.tflite"
-    """Load TFLite model and run inference on the provided image."""
-    # Load TFLite model and allocate tensors
-    interpreter = tf.lite.Interpreter(model_path=tflite_model_path)
-    interpreter.allocate_tensors()
-    app.run(debug=False)
+# if __name__ == "__main__":
+#     tflite_model_path = "model2019.tflite"
+#     """Load TFLite model and run inference on the provided image."""
+#     # Load TFLite model and allocate tensors
+#     interpreter = tf.lite.Interpreter(model_path=tflite_model_path)
+#     interpreter.allocate_tensors()
+#     app.run(debug=False)
+
+tflite_model_path = "model2019.tflite"
+"""Load TFLite model and run inference on the provided image."""
+# Load TFLite model and allocate tensors
+interpreter = tf.lite.Interpreter(model_path=tflite_model_path)
+interpreter.allocate_tensors()
+print("Model loaded successfully")
+# app.run(debug=False)
 
 
