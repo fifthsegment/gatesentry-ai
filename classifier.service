@@ -1,0 +1,15 @@
+[Unit]
+Description=Classifier service
+After=multi-user.target
+[Service]
+Type=simple
+Restart=always
+ExecStart=/root/gatesentry-ai/myenv/bin/python /root/gatesentry-ai/server.py
+# --bind 0.0.0.0:8000
+WorkingDirectory=/root/gatesentry-ai
+Environment="PATH=/root/gatesentry-ai/myvenv/bin"
+#ExecStart=/path/to/your/venv/bin/gunicorn your_flask_script_name:app --bind 127.0.0.1:8000
+#StandardOutput=append:/tmp/stocks.log
+#StandardError=append:/tmp/stockserror.log
+[Install]
+WantedBy=multi-user.target
