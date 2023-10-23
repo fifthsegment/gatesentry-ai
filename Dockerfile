@@ -1,5 +1,5 @@
 # Use a base image
-FROM tensorflow/tensorflow:2.14.0
+FROM python:3.11-slim
 
 # Set the working directory
 WORKDIR /app
