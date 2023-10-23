@@ -27,4 +27,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: your-dockerhub-username/gatesentry-ai:latest
+          tags: abdullahi1/gatesentry-ai:latest
