@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Install dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt gunicorn
+RUN pip3 install --no-cache-dir -r requirements.txt gunicorn
 
 # Copy the source code into the container
 COPY . .
