@@ -4,3 +4,4 @@ tensorflow==2.14.0
 Werkzeug==2.2.2
 psutil==5.9.5
 Wand==0.6.2
+onnxruntime==1.16.1
