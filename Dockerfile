@@ -6,7 +6,8 @@ WORKDIR /app
 
 # Install dependencies
 COPY requirements.txt .
-RUN pip3 install --no-cache-dir -r requirements.txt gunicorn
+RUN pip3 install --only-binary Pillow Pillow
+RUN pip3 install --no-cache-dir -r requirements.txt gunicorn 
 
 # Copy the source code into the container
 COPY . .
