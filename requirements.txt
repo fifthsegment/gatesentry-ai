@@ -1,6 +1,5 @@
 Flask==2.0.1
-numpy==1.19.2
-Werkzeug==0.16.1
+numpy==1.21.0
 tensorflow==2.5.0
 Pillow==8.2.0
 psutil==5.9.5
