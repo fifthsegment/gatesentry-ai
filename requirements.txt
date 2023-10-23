@@ -3,3 +3,4 @@ numpy==1.23.5
 tensorflow==2.14.0
 Werkzeug==2.2.2
 psutil==5.9.5
+wand=0.6.2
